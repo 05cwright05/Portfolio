@@ -10,7 +10,7 @@ html, body {
 
 .app-bar {
   width:80%;
-  display: flex;
+  display:flex;
   justify-content: center;
   align-items: center;
   background-color: #333;
@@ -20,8 +20,13 @@ html, body {
   border-radius: 20px;
   bottom: 10px;
   background-color: #FFF;
+  opacity: 0;
+  transition: opacity 1s;  
 }
-
+.app-bar:hover {
+  transition: opacity 1s;  
+  opacity:1;
+}
 
 .app_logo {
   width: 9%;
@@ -56,7 +61,7 @@ html, body {
     width: 100%;
     height:100%;
     margin: 0px;
-    background-image: url("temp.avif");
+    background-image: url("images/temp.avif");
     background-size: cover;
   }
   .circle img{
@@ -69,6 +74,46 @@ html, body {
   }
   /* End Social Media Styling */
 
+
+  /* begin general project styling */
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto; /* Center the carousel horizontally */
+    overflow: hidden; /* Hide overflowing images */
+  }
+  
+  .carousel-slide {
+    display: flex; /* Display the images side by side */
+    transition: transform 0.5s ease-in-out; /* Apply a smooth transition effect */
+    width: 300vw; /* dependent on # of images */
+  }
+  
+  .carousel-slide img {
+    width: 100vw; /* cover 100% of the viewable screen */
+    flex:1 1 0;
+    height: auto;
+  }
+  
+  .carousel-prev,
+  .carousel-next {
+    position: absolute;
+    top: 50%; /* Position the buttons vertically at the center */
+    transform: translateY(-50%); /* Adjust the vertical alignment */
+    background: none;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  .carousel-prev {
+    left: 10px;
+  }
+  
+  .carousel-next {
+    right: 10px;
+  }
+  
 
 
   
