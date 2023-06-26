@@ -32,14 +32,3 @@ window.addEventListener('load', function() {
   setInterval(nextSlide, 5000);
 });
 
-
-//Code for nav bar
-const bar = document.querySelector('.app-bar');
-
-bar.addEventListener('mouseenter', function() {
-  bar.style.opacity = '0.9';
-});
-
-bar.addEventListener('mouseleave', function() {
-  bar.style.opacity = '0';
-});
