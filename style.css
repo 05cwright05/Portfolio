@@ -25,19 +25,21 @@ html, body {
   bottom: 10px;
   background-color: #666666;
   opacity: 0;
-  transition: opacity 1s;  
+  transition: opacity 1s; 
 }
 .app-bar:hover {
-  transition: opacity 1s;  
   opacity:1;
+  transition: opacity 1s;  
 }
 
-.app_logo {
+.app-bar > .app_logo {
   width: 9%;
   height: 75%;
   background-color: #000;
   margin: 5px;
   border-radius: 5px;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
 }
 
  /*Social Media Styling */

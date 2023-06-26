@@ -31,3 +31,15 @@ window.addEventListener('load', function() {
   // Automatically move to the next slide every 5 seconds
   setInterval(nextSlide, 5000);
 });
+
+
+//Code for nav bar
+const bar = document.querySelector('.app-bar');
+
+bar.addEventListener('mouseenter', function() {
+  bar.style.opacity = '0.9';
+});
+
+bar.addEventListener('mouseleave', function() {
+  bar.style.opacity = '0';
+});
