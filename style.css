@@ -100,7 +100,6 @@ html, body {
 
   /* begin general project styling */
   .carousel-container {
-    position: relative;
     width: 100%;
     margin: 0 auto; /* Center the carousel horizontally */
     overflow: hidden; /* Hide overflowing images */
@@ -109,15 +108,19 @@ html, body {
   .carousel-slide {
     display: flex; /* Display the images side by side */
     transition: transform 0.5s ease-in-out; /* Apply a smooth transition effect */
-    width: 300vw; /* dependent on # of images */
+    width: 300%; /* dependent on # of images */
+    align-items: center;
+    justify-content: center; /* Center the images horizontally */
+    align-self: center;
   }
   
   .carousel-slide img {
-    width: 100vw; /* cover 100% of the viewable screen */
     flex:1 1 0;
-    height: auto;
+    height: auto; /* Ensure the image doesn't exceed the height of the carousel */
+    width: 100%;
+    align-self: center;
   }
-  
+
   .carousel-prev,
   .carousel-next {
     position: absolute;
@@ -136,7 +139,13 @@ html, body {
   .carousel-next {
     right: 10px;
   }
-  
 
+  .project-grid-container{
+    /* establish a grid which is 2/3 image carousel and 1/3 description */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    place-content: center center;
+  }
+  
 
   
