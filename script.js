@@ -1,5 +1,4 @@
 //Code for IMAGE carosel as utilized in general projects
-
 // Wait for the page to load
 window.addEventListener('load', function() {
   var slideContainer = document.querySelector('.carousel-slide');
@@ -31,4 +30,43 @@ window.addEventListener('load', function() {
   // Automatically move to the next slide every 5 seconds
   setInterval(nextSlide, 5000);
 });
+
+
+//APP BEHAVIOR
+//true if you are on the main screen
+var home = true;
+
+
+//add hover fade in and out
+var bar = document.querySelector('.app-bar');
+bar.addEventListener('mouseenter', () => {
+  bar.style.opacity = '1';
+});
+bar.addEventListener('mouseleave', () => {
+  // if you are not on the home screen fadeaway. Therefore if you are on homescreen it will always be present
+  if (!home){
+    bar.style.opacity = '0';
+  }
+});
+
+// create a list of all logos
+var logos = document.querySelectorAll('.app_logo');
+
+// Iterate over each logo and add a click event listener
+logos.forEach(function (logo) {
+  logo.addEventListener('click', function () {
+    // get the ID of the clicked logo
+    var logoId = logo.id;
+    //derived from removing _logo
+    //Will be used to show the application
+    var applicationId = logoId.split('_')[0];
+    //Show what needs to be shown
+    document.getElementById(applicationId).style.display="inline";
+    //hide homescreen image
+    var screen = document.getElementById("homescreen");
+    screen.style.backgroundSize = "0 0";
+    home = false;
+  });
+});
+
 
