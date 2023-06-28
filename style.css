@@ -8,6 +8,11 @@ html, body {
     color:blue;
 }
 
+#smedia{
+  /* Hide the page until clicked */
+  display:none; 
+}
+
 #homescreen{
   background-image: url("images/background.jpg");
   background-size: cover;
@@ -25,13 +30,17 @@ html, body {
   bottom: 1vw;
   background-color: #666666;
   transition: opacity 1s; 
-  opacity: 0;
+  opacity:1;
   flex-grow: 1;
 }
-.app-bar:hover {
+
+
+.app-bar:hover{
+  color: blue;
   opacity:1;
-  transition: opacity 1s;  
+  transition: opacity 1s; 
 }
+
 
 .app-bar > .app_logo {
   width: 12%;
@@ -145,6 +154,11 @@ html, body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     place-content: center center;
+  }
+  #catapult{
+    display:none;
+    background-color:#333;
+    
   }
   
 
