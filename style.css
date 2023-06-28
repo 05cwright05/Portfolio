@@ -14,17 +14,19 @@ html, body {
 }
 
 .app-bar {
-  width:80%;
+  width:75%;
   display:flex;
   justify-content: center;
   align-items: center;
-  height: 20%;
-  margin-left: 10%;
+  height: 9vw;
+  margin-left: 12.5%;
   position: fixed;
-  border-radius: 20px;
-  bottom: 10px;
+  border-radius: 25px;
+  bottom: 1vw;
   background-color: #666666;
   transition: opacity 1s; 
+  opacity: 0;
+  flex-grow: 1;
 }
 .app-bar:hover {
   opacity:1;
@@ -32,13 +34,29 @@ html, body {
 }
 
 .app-bar > .app_logo {
-  width: 9%;
-  height: 75%;
-  background-color: #000;
-  margin: 5px;
-  border-radius: 5px;
+  width: 12%;
+  height:auto;
+  padding-left: 2%;
+  padding-right: 2%;
   transition: opacity 1s ease-in-out;
   opacity: 1;
+  vertical-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.app-bar .app_logo:last-child{
+  padding-right:8%;
+}
+.app-bar .app_logo:first-child{
+  padding-left:8%;
+}
+.app_logo img{
+  width:100%;
+  height:auto;
+  border-radius: 30%;
+}
+.app_logo:hover{
+  transform: scale(1.1);
 }
 
  /*Social Media Styling */
