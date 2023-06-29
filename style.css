@@ -1,23 +1,39 @@
+/* General Site Styling */
 html, body {
     height: 100%;
     margin: 0;
     background-color: #333;
+    color: #2e313a;
+    text-decoration: none;
   }
-
-#test{
-    color:blue;
-}
-
-#smedia{
-  /* Hide the page until clicked */
-  display:none; 
-}
+  p{
+    display:block;
+  }
+  span {
+    white-space: nowrap;
+  }
+  ul {
+    /* uses bullets */
+    list-style-type: disc; 
+  }
+  li {
+    font-weight: bold;
+  }
+  a{
+    font-weight:lighter;
+    font-size: .7em;
+    color: #2e313a;
+    text-decoration: none;
+  }
 
 #homescreen{
   background-image: url("images/background.jpg");
   background-size: cover;
 }
 
+.hidden{
+  display:none;
+}
 .app-bar {
   width:75%;
   display:flex;
@@ -29,36 +45,31 @@ html, body {
   border-radius: 25px;
   bottom: 1vw;
   background-color: #666666;
-  transition: opacity 1s; 
-  opacity:1;
+  transition: opacity .8s ease-in-out; 
+  opacity:.9;
   flex-grow: 1;
+  z-index: 9999999;
 }
-
-
-.app-bar:hover{
-  color: blue;
-  opacity:1;
-  transition: opacity 1s; 
-}
-
 
 .app-bar > .app_logo {
   width: 12%;
   height:auto;
   padding-left: 2%;
   padding-right: 2%;
-  transition: opacity 1s ease-in-out;
+  transition: opacity .8s ease-in-out;
   opacity: 1;
   vertical-align: center;
   margin-top: auto;
   margin-bottom: auto;
 }
+/* add extra padding to the outermost apps */
 .app-bar .app_logo:last-child{
   padding-right:8%;
 }
 .app-bar .app_logo:first-child{
   padding-left:8%;
 }
+
 .app_logo img{
   width:100%;
   height:auto;
@@ -110,24 +121,70 @@ html, body {
   /* begin general project styling */
   .carousel-container {
     width: 100%;
-    margin: 0 auto; /* Center the carousel horizontally */
     overflow: hidden; /* Hide overflowing images */
+    display:flex;
+    justify-content:center;
+    height: 100vh;
   }
   
   .carousel-slide {
     display: flex; /* Display the images side by side */
-    transition: transform 0.5s ease-in-out; /* Apply a smooth transition effect */
-    width: 300%; /* dependent on # of images */
+    transition: transform 0.5s ease-in-out; 
+    width: 300%; /* # of images x 100% */
     align-items: center;
-    justify-content: center; /* Center the images horizontally */
-    align-self: center;
+    z-index:0;
   }
-  
+  .title{
+    color: #2e313a;
+    display: block;
+  }
+
+  .attributes{
+    border-radius: 4px;
+    font-family: Helvetica;
+    font-size: 0.9em;
+    text-align: center;
+    color: #fff;
+    padding: 5px;
+    line-height: normal;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 0.3em;
+    margin-right: 0.3em;
+    background-color: blue;
+    /* flex: 1 1 0; */
+    display: inline-block;
+  }
+  .web-attribute{
+    background-color: #A63661;
+  }
+  .presentation-attribute{
+    background-color: #F65E43;
+  }
+  .collaboration-attribute{
+    background-color: #5E4B8B;
+  }
+  .project-description{
+    z-index: 1;
+  }
+  .attribute-container{
+    display:flex;
+    width: 33.33333333333333%;
+  }
+  .description{
+    position:absolute;
+    color:#2e313a
+  }
   .carousel-slide img {
     flex:1 1 0;
     height: auto; /* Ensure the image doesn't exceed the height of the carousel */
-    width: 100%;
-    align-self: center;
+    min-width: 90%;
+    max-width:90%;
+    margin-left:5%;
+    margin-right:5%;
+    background-size: 100%;
+    box-shadow: 6px 6px 16px -10px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
   }
 
   .carousel-prev,
@@ -155,11 +212,13 @@ html, body {
     grid-template-columns: 2fr 1fr;
     place-content: center center;
   }
-  #catapult{
-    display:none;
-    background-color:#333;
-    
+  .project{
+    background-color:#F8F8F8;
+    height:100vw;
+    background-image: url("images/tempbg.jpg");
+    background-size:cover;
   }
+
   
 
   
