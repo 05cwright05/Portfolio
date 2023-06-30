@@ -1,12 +1,15 @@
-//Make sure that the Title is always lined up with the top of the image carousel
+//start on home page
+var home = true;
+
+
+//This works on most pages to ensure that the title of the page is lined up with top of the image
+//#region Allign text with top of image
 window.addEventListener('load', function() {
   adjustTitlePosition();
 });
-
 window.addEventListener('resize', function() {
   adjustTitlePosition();
 });
-
 function adjustTitlePosition() {
   //var title = document.querySelector('.title');
   var paragraphs = document.querySelectorAll('.description');
@@ -18,10 +21,13 @@ function adjustTitlePosition() {
     var imageTop = firstImage.offsetTop;
     paragraphs[i].style.top = (imageTop) + "px";
   }
-  }
+}
+//#endregion
 
 
-//Code for IMAGE carosel as utilized in general projects
+//Controls the behavior of the image Carousel.
+var carouselDelay = 5000; 
+//#region Code for IMAGE carosel 
 
 // Wait for the page to load
 window.addEventListener('load', function() {
@@ -48,12 +54,12 @@ window.addEventListener('load', function() {
       slideContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
 
-    // Attach event listeners to the buttons
+    // Add click event to the buttons
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
 
-    // Automatically move to the next slide every 5 seconds
-    setInterval(nextSlide, 3000);
+    // Automatically move to the next slide every # seconds
+    setInterval(nextSlide, carouselDelay);
   }
 
   // Get all carousel containers
@@ -64,13 +70,10 @@ window.addEventListener('load', function() {
     initializeCarousel(carouselContainer);
   });
 });
+//#endregion
 
 
-//APP BEHAVIOR
-//true if you are on the main screen
-var home = true;
-
-
+//#region Appbar fade in-out when in an app
 //add hover fade in and out
 var bar = document.querySelector('.app-bar');
 bar.addEventListener('mouseenter', () => {
@@ -82,10 +85,12 @@ bar.addEventListener('mouseleave', () => {
     bar.style.opacity = '0';
   }
 });
+//#endregion
 
+
+//#region Click Logo Code
 // create a list of all logos
 var logos = document.querySelectorAll('.app_logo');
-
 // Iterate over each logo and add a click event listener
 logos.forEach(function (logo) {
   logo.addEventListener('click', function () {
@@ -94,23 +99,17 @@ logos.forEach(function (logo) {
     //derived from removing _logo
     //Will be used to show the application
     var applicationId = logoId.split('_')[0];
-    // Hide all divs
 
   //Hide all apps
   var apps = document.querySelectorAll(".app");
   for (var i = 0; i < apps.length; i++) {
     apps[i].classList.add("hidden");
   }
-
   // Show selected App
   var shownApp = document.getElementById(applicationId);
   if (shownApp) {
-    console.log("ran");
     shownApp.classList.remove("hidden");
   }
-
-
-
     var screen = document.getElementById("homescreen");
     screen.style.backgroundSize = "0 0";
     home = false;
@@ -118,5 +117,4 @@ logos.forEach(function (logo) {
     adjustTitlePosition();
   });
 });
-
-
+//#endregion
