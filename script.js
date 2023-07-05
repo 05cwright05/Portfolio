@@ -1,3 +1,5 @@
+
+
 //start on home page
 var home = true;
 
@@ -118,3 +120,5 @@ logos.forEach(function (logo) {
   });
 });
 //#endregion
+
+

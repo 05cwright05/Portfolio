@@ -178,7 +178,7 @@ html, body {
     background-color: #F2B705;
   }
   .math-attribute{
-    background-color: #36A65F;;
+    background-color: #36A65F;
   }
   .ethic-attribute{
     background-color: #2980B9;
@@ -250,6 +250,118 @@ html, body {
     background-size:cover;
   }
 
+
+  .container {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 60%;
+    height: 80%;
+    overflow: hidden;
+  }
+  form{
+    height: 100%;
+  }
+  .descriptionII{
+    top: 5%;
+    position:absolute;
+    color:#2e313a;
+    margin:0;
+    padding:0;
+  }
+  .contact-grid {
+    border-radius: 1.5%;
+    overflow: hidden;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: 1fr 2fr 2fr 5fr;
+    height: 85%;
+  }
   
+  .contact-grid-item {
+    background-color: whitesmoke;
+  }
+  
+  .row1 {
+    color: #fff;
+    background-color: #2980B9;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1em;
+    resize: none;
+    height: 1fr; /* Set the height to 1/10 of the grid container */
+  }
+  
+  .row2 {
+    height: 2fr;
+    text-align: left top;
+  }
+  
+  .row3 {
+    height: 2fr;
+  }
+  
+  .row4 {
+    height: 5fr;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    resize: none;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+  
+  .button {
+    width: 50%; /* Set the button width to 50% of the grid container */
+    padding: 10px;
+    text-align: center;
+    background-color: #2980B9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    transform: scale(1.05); /* Enlarge the button by 10% on hover */
+  }
+  .button:active {
+    /* On click changa da colore */
+    background-color: #ff5500;
+  }
+  #funny-carousel{
+    z-index:-9999;
+  }
+  
+ .linkedImageContainer{
+  width:100%;
+  display:flex;
+  height:20vh;
+ } 
+ .linkedImageContainer a{
+  flex: 1 1 0;
+  max-width: 33.3333%;
+  min-width:20%;
+  height: auto;
+  margin:10px;
+ }
+ .linkedImageContainer img{
+  flex: 1 1 0;
+  max-width: 100%;
+  min-width:100%;
+  height: auto;
+ }
+  
+  
+  .emailSend{
+    color: #2e313a;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 1em;
+  }
 
   
