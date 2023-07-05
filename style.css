@@ -134,12 +134,40 @@ html, body {
   }
   
   .carousel-slide {
+
     display: flex; /* Display the images side by side */
     transition: transform 0.5s ease-in-out; 
     width: 300%; /* # of images x 100% */
-    align-items: center;
+    /* gonna move up to make them match contact */
+    /* align-items: center; */
+    /* position:relative; */
+
     z-index:0;
   }
+
+  .carousel-slide img {
+    position:relative; 
+    top: 5%;
+    flex:1 1 0;
+    height: auto; /* Ensure the image doesn't exceed the height of the carousel */
+    min-width: 90%;
+    max-width:90%;
+    margin-left:5%;
+    margin-right:5%;
+    background-size: 100%;
+    box-shadow: 6px 6px 16px -10px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+  }
+  .carousel-slide a {
+    flex:1 1 0;
+    height: auto; /* Ensure the image doesn't exceed the height of the carousel */
+    min-width: 90%;
+    max-width:90%;
+    margin-left:5%;
+    margin-right:5%;
+    background-size: 100%;
+  }
+
   .title{
     color: #2e313a;
     display: block;
@@ -196,26 +224,6 @@ html, body {
     position:absolute;
     color:#2e313a
   }
-  .carousel-slide img {
-    flex:1 1 0;
-    height: auto; /* Ensure the image doesn't exceed the height of the carousel */
-    min-width: 90%;
-    max-width:90%;
-    margin-left:5%;
-    margin-right:5%;
-    background-size: 100%;
-    box-shadow: 6px 6px 16px -10px rgba(0, 0, 0, 0.4);
-    border-radius: 6px;
-  }
-  .carousel-slide a {
-    flex:1 1 0;
-    height: auto; /* Ensure the image doesn't exceed the height of the carousel */
-    min-width: 90%;
-    max-width:90%;
-    margin-left:5%;
-    margin-right:5%;
-    background-size: 100%;
-  }
 
   .carousel-prev,
   .carousel-next {
@@ -256,7 +264,8 @@ html, body {
   .container {
     position: absolute;
     top: 5%;
-    left: 5%;
+    margin-left: 5%;
+    margin-right:5%;
     width: 60%;
     height: 80%;
     overflow: hidden;
