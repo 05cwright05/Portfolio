@@ -16,8 +16,6 @@ function adjustTitlePosition() {
   //var title = document.querySelector('.title');
   var paragraphs = document.querySelectorAll('.description');
   var parentDivs = document.querySelectorAll('.carousel-slide');
-  console.log("The number of paragraphs is " + paragraphs.length)
-  console.log(imageTop + "it");
   for (let i = 0; i < paragraphs.length; i++){
     var firstImage = parentDivs[i].querySelector('img');
     var imageTop = firstImage.offsetTop;
@@ -36,8 +34,8 @@ window.addEventListener('load', function() {
   // Function to initialize a carousel
   function initializeCarousel(carouselContainer) {
     var slideContainer = carouselContainer.querySelector('.carousel-slide');
-    var prevBtn = carouselContainer.querySelector('.carousel-prev');
-    var nextBtn = carouselContainer.querySelector('.carousel-next');
+    // var prevBtn = carouselContainer.querySelector('.carousel-prev');
+    // var nextBtn = carouselContainer.querySelector('.carousel-next');
 
     // Initialize carousel
     var currentIndex = 0;
@@ -57,8 +55,8 @@ window.addEventListener('load', function() {
     }
 
     // Add click event to the buttons
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
+    // nextBtn.addEventListener('click', nextSlide);
+    // prevBtn.addEventListener('click', prevSlide);
 
     // Automatically move to the next slide every # seconds
     setInterval(nextSlide, carouselDelay);
