@@ -82,6 +82,9 @@ html, body {
   flex-grow: 1;
   z-index: 9999999;
 }
+.info{
+  font-size:1.4em;
+}
 .app{
   transition: opacity 0.5s ease-out;
 }
