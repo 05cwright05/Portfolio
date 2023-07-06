@@ -3,6 +3,25 @@
 //start on home page
 var home = true;
 
+function handleButtonClick() {
+  var closeButtons = document.querySelectorAll('.close-button');
+  for(let button of closeButtons){
+    //Give click feedback by making lighter
+    button.style.backgroundColor = '#ff6666'; 
+    //Show about me page
+      //Hide all apps
+    var apps = document.querySelectorAll(".app");
+    for (var i = 0; i < apps.length; i++) {
+      apps[i].classList.add("hidden");
+    }
+  // Show selected App
+  var shownApp = document.getElementById("smedia");
+  if (shownApp) {
+    shownApp.classList.remove("hidden");
+  }
+  }
+
+}
 
 //This works on most pages to ensure that the title of the page is lined up with top of the image
 //#region Allign text with top of image
