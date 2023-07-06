@@ -1,13 +1,17 @@
 
 
-//start on home page
+//start on about page
 var home = true;
+social_media = document.getElementById("smedia")
+if (social_media) {
+  social_media.classList.remove("hidden");
+}
+
 
 function handleButtonClick() {
+  home = true;
   var closeButtons = document.querySelectorAll('.close-button');
   for(let button of closeButtons){
-    //Give click feedback by making lighter
-    button.style.backgroundColor = '#ff6666'; 
     //Show about me page
       //Hide all apps
     var apps = document.querySelectorAll(".app");
@@ -20,7 +24,9 @@ function handleButtonClick() {
     shownApp.classList.remove("hidden");
   }
   }
-
+  //Show app bar
+  var bar = document.querySelector('.app-bar');
+  bar.style.opacity = '.9';
 }
 
 //This works on most pages to ensure that the title of the page is lined up with top of the image
@@ -66,7 +72,7 @@ window.addEventListener('load', function() {
       currentIndex = (currentIndex + 1) % totalSlides;
       slideContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     }
-
+    // currently archived
     function prevSlide() {
       slideWidth = slideContainer.parentNode.offsetWidth;
       currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
@@ -124,18 +130,19 @@ logos.forEach(function (logo) {
   for (var i = 0; i < apps.length; i++) {
     apps[i].classList.add("hidden");
   }
+  home = false;
   // Show selected App
   var shownApp = document.getElementById(applicationId);
   if (shownApp) {
     shownApp.classList.remove("hidden");
+    //if we are on the about page i always want the bar present
+    if(applicationId == "smedia"){
+      home=true;
+    }
   }
-    var screen = document.getElementById("homescreen");
-    screen.style.backgroundSize = "0 0";
-    home = false;
     //recheck title position
     adjustTitlePosition();
   });
 });
 //#endregion
-
 

@@ -7,7 +7,9 @@ html, body {
     color: #2e313a;
     text-decoration: none;
     overflow: hidden;
-    font-family: 'Times New Roman', Times, serif
+    font-family: 'Times New Roman', Times, serif;
+    background-image:url(images/tempbg.jpg);
+    background-size:cover;
   }
 
   
@@ -60,10 +62,6 @@ html, body {
     background-color: #ff0000;
   }
   
-#homescreen{
-  background-image: url("images/background.jpg");
-  background-size: cover;
-}
 
 .hidden{
   display:none;
@@ -84,7 +82,9 @@ html, body {
   flex-grow: 1;
   z-index: 9999999;
 }
-
+.app{
+  transition: opacity 0.5s ease-out;
+}
 .app-bar > .app_logo {
   width: 12%;
   height:auto;
@@ -189,10 +189,10 @@ html, body {
   .carousel-slide a {
     flex:1 1 0;
     height: auto; /* Ensure the image doesn't exceed the height of the carousel */
-    min-width: 90%;
-    max-width:90%;
-    margin-left:5%;
-    margin-right:5%;
+    min-width: 94%;
+    max-width:94%;
+    margin-left:3%;
+    margin-right:3%;
     background-size: 100%;
   }
 
@@ -250,7 +250,8 @@ html, body {
   }
   .description{
     position:absolute;
-    color:#2e313a
+    color:#2e313a;
+    padding-right: 1vw;
   }
 
   .carousel-prev,
@@ -294,7 +295,7 @@ html, body {
     top: 5%;
     margin-left: 5%;
     margin-right:5%;
-    width: 60%;
+    width: 56%;
     height: 80%;
     overflow: hidden;
   }
